@@ -5,14 +5,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nawa's World</title>
+        <title>Nawa&apos;s World</title>
         <meta name="description" content="Welcome to my personal space on the web!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1>Welcome to Nawa's World</h1>
+          <h1>Welcome to Nawa&apos;s World</h1>
           <p>This is my personal page where you can find me online.</p>
 
           <div className={styles.buttons}>
