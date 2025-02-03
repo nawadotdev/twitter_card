@@ -31,7 +31,7 @@ https://twitter-card-psi.vercel.app/api/twitter-card?image=<IMAGE URL>
 
 ### 2️⃣ **With Custom Title & Description**
 ```url
-https://your-vercel-app.vercel.app/api/twitter-card?image=<IMAGE_URL>&redirectUrl=<REDIRECT_URL>&title=<TITLE>&description=<DESCRIPTION>
+https://twitter-card-psi.vercel.ap/api/twitter-card?image=<IMAGE_URL>&redirectUrl=<REDIRECT_URL>&title=<TITLE>&description=<DESCRIPTION>
 ```
 
 ## 📜 How It Works
