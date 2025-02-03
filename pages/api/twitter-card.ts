@@ -3,7 +3,8 @@ import { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { image } = req.query;
 
-    // Eğer `image` bir string değilse, varsayılan görsel kullan
+    // If 'image' is a string and starts with 'http', use it as the image URL
+    // Otherwise, use the default image
     const imageUrl = (typeof image === "string" && image.startsWith("http")) 
         ? image 
         : "https://cdn.jsdelivr.net/gh/nawadotdev/TwitterCard@main/default.png";
@@ -16,23 +17,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             
-            <!-- Twitter Card -->
+            <!-- Twitter Card meta tags -->
             <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content="Dinamik Twitter Görseli">
-            <meta name="twitter:description" content="Bu görsel dinamik olarak değişiyor.">
+            <meta name="twitter:title" content="Dynamic Twitter Image">
+            <meta name="twitter:description" content="This image changes dynamically.">
             <meta name="twitter:image" content="${imageUrl}">
 
-            <!-- Open Graph -->
-            <meta property="og:title" content="Dinamik Görsel">
-            <meta property="og:description" content="Bu sayfa Twitter ve diğer platformlarda önizleme oluşturur.">
+            <!-- Open Graph meta tags -->
+            <meta property="og:title" content="Dynamic Image">
+            <meta property="og:description" content="This page generates a preview on Twitter and other platforms.">
             <meta property="og:image" content="${imageUrl}">
             <meta property="og:type" content="website">
 
-            <title>Twitter Görsel Paylaşımı</title>
+            <title>Twitter Image Sharing</title>
         </head>
         <body>
-            <h1>Twitter Görseli</h1>
-            <img src="${imageUrl}" alt="Görsel">
+            <h1>Twitter Image</h1>
+            <img src="${imageUrl}" alt="Image">
         </body>
         </html>
     `);
