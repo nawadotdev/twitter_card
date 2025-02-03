@@ -1,40 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 📷 Twitter Card API
 
-## Getting Started
+This API dynamically generates an HTML page with Open Graph and Twitter Card metadata, allowing images to be previewed on Twitter and other platforms. When users click on the shared link, they are redirected to a specified URL.
 
-First, run the development server:
+## ✨ Features
+- 📌 **Dynamic Twitter & Open Graph previews**  
+- 🎯 **Custom title and description support**  
+- 🔗 **Automatic redirection on click**  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Usage
+
+### 📡 API Endpoint:
+```
+GET https://twitter-card-psi.vercel.app/api/twitter-card
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🛠 Query Parameters:
+| Parameter     | Type   | Required | Description |
+|--------------|--------|----------|-------------|
+| `image`      | URL    | ✅       | The direct URL of the image to display in the preview. |
+| `redirectUrl` | URL    | ❌       | The URL where users will be redirected when they click the image. |
+| `title`      | String | ❌       | The title of the preview. Defaults to `@nawa.dev Twitter Card`. |
+| `description` | String | ❌       | The description of the preview. Defaults to `"Dynamic image for Twitter preview. Powered by @nawa.dev."`. |
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 📌 Example Usage
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 1️⃣ **Basic Twitter Card**
+```url
+https://twitter-card-psi.vercel.app/api/twitter-card?image=<IMAGE URL>
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### 2️⃣ **With Custom Title & Description**
+```url
+https://your-vercel-app.vercel.app/api/twitter-card?image=<IMAGE_URL>&redirectUrl=<REDIRECT_URL>&title=<TITLE>&description=<DESCRIPTION>
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📜 How It Works
+1. **The URL is shared on Twitter.**  
+2. **Twitter fetches metadata (image, title, and description).**  
+3. **When clicked, users are redirected to `redirectUrl`.**  
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+🚀 **Perfect for Web3 projects, promotions, and more!**
