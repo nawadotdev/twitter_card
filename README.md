@@ -11,7 +11,7 @@ This API dynamically generates an HTML page with Open Graph and Twitter Card met
 
 ### 📡 API Endpoint:
 ```
-GET https://twitter-card-psi.vercel.app/api/twitter-card
+GET https://twitter-card-nawadotdev.online/api/twitter-card
 ```
 
 ### 🛠 Query Parameters:
@@ -26,12 +26,12 @@ GET https://twitter-card-psi.vercel.app/api/twitter-card
 
 ### 1️⃣ **Basic Twitter Card**
 ```url
-https://twitter-card-psi.vercel.app/api/twitter-card?image=<IMAGE URL>
+https://twitter-card-nawadotdev.online/api/twitter-card?image=<IMAGE URL>
 ```
 
 ### 2️⃣ **With Custom Title & Description**
 ```url
-https://twitter-card-psi.vercel.ap/api/twitter-card?image=<IMAGE_URL>&redirectUrl=<REDIRECT_URL>&title=<TITLE>&description=<DESCRIPTION>
+https://twitter-card-nawadotdev.online/api/twitter-card?image=<IMAGE_URL>&redirectUrl=<REDIRECT_URL>&title=<TITLE>&description=<DESCRIPTION>
 ```
 
 ## 📜 How It Works
